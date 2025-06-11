@@ -26,8 +26,6 @@ coverage-final.json
 .DS_Store
 Thumbs.db
 
-# npm lock files (nếu dùng yarn thì loại bỏ dòng này)
-package-lock.json
 
 # Optional: Ignore screenshots or videos if saved
 screenshots/

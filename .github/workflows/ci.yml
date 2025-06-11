@@ -34,3 +34,5 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report
+      - name: Check if report exists
+        run: ls -R
