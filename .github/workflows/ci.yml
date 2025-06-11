@@ -2,15 +2,15 @@ name: Playwright Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
   on:
-  workflow_dispatch:  # ← Thêm dòng này để chạy thủ công
+    workflow_dispatch:  # ← Thêm dòng này để chạy thủ công
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 jobs:
   test:
     runs-on: ubuntu-latest
