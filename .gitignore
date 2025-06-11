@@ -1,0 +1,34 @@
+# Playwright test outputs
+test-results/
+playwright-report/
+trace.zip
+
+# Node dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Coverage reports
+coverage/
+coverage-final.json
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# npm lock files (nếu dùng yarn thì loại bỏ dòng này)
+package-lock.json
+
+# Optional: Ignore screenshots or videos if saved
+screenshots/
+videos/
