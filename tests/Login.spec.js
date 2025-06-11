@@ -8,13 +8,13 @@ test.use({
   viewport: null,
   launchOptions: {
     args: ['--start-maximized'],
-    headless: true,
+    headless: false,
   }
 });
 test('Login successfully using Page Object Model', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
-  await loginPage.login('tomsmith', 'SuperSecretPassword!');
+  await loginPage.login('Admin', 'admin123');
   await loginPage.assertSuccessMessage();
   await loginPage.assertUrlAfterLogin();
   //await this.page.waitForTimeout(7000);

@@ -5,14 +5,14 @@ class LoginPage {
    */
   constructor(page) {
     this.page = page;
-    this.usernameInput = page.locator('#username');
-    this.passwordInput = page.locator('#password');
+    this.usernameInput = page.locator('//input[@name = "username"]');
+    this.passwordInput = page.locator('//input[@name = "password"]');
     this.loginButton = page.locator('button[type="submit"]');
-    this.flashMessage = page.locator('.flash');
+    this.flashMessage = page.locator('//img[@alt = "client brand banner"]');
   }
 
   async goto() {
-    await this.page.goto('https://the-internet.herokuapp.com/login');
+    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   }
 
   async login(username, password) {
@@ -22,11 +22,11 @@ class LoginPage {
   }
 
   async assertSuccessMessage() {
-    await expect(this.flashMessage).toContainText('You logged into a secure area!');
+    await expect(this.flashMessage).toBeVisible;
   }
 
   async assertUrlAfterLogin() {
-    await expect(this.page).toHaveURL('https://the-internet.herokuapp.com/secure');
+    await expect(this.page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
   }
   
 }
