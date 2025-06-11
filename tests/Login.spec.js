@@ -1,21 +1,10 @@
-// tests/login.spec.js
-const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../PO/LoginPage');
+// BỎ phần này đi nếu đã có cấu hình trong playwright.config.js
+// test.use({ ... })
 
-
-
-test.use({
-  viewport: null,
-  launchOptions: {
-    args: ['--start-maximized'],
-    headless: true,
-  }
-});
 test('Login successfully using Page Object Model', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
   await loginPage.login('Admin', 'admin123');
   await loginPage.assertSuccessMessage();
   await loginPage.assertUrlAfterLogin();
-  //await this.page.waitForTimeout(7000);
 });
