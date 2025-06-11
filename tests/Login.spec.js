@@ -1,5 +1,5 @@
-// BỎ phần này đi nếu đã có cấu hình trong playwright.config.js
-// test.use({ ... })
+import { test } from '@playwright/test';
+import { LoginPage } from '../PO/LoginPage';
 
 test('Login successfully using Page Object Model', async ({ page }) => {
   const loginPage = new LoginPage(page);
