@@ -1,16 +1,9 @@
-// playwright.config.js
-const { defineConfig } = require('@playwright/test');
+import { defineConfig } from '@playwright/test';
 
-module.exports = defineConfig({
-  timeout: 30000,
-  retries: 0,
+export default defineConfig({
   testDir: './tests',
-  use: {
-    headless: true,
-    viewport: null,
-    launchOptions: {
-      args: ['--start-maximized'],
-    }
-  },
-  reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }]
+  ],
 });
